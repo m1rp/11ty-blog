@@ -9,7 +9,7 @@ draft         : false
 cover         : "green-plant.jpg"
 cover_alt     : "leafy green plant photographed in a botanical garden, probably Copenhagen"
 date          : "2019-01-03"
-
+layout        : layouts/post.njk
 ---
 
 ## _I have a blog, I should probably use it_

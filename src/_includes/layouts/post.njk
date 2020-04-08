@@ -1,0 +1,19 @@
+
+
+{% extends "layouts/base.njk" %}
+  {% block content%}
+    <article class="cf ph3 ph5-ns pv3-l mw7 w-100 center">
+      <section class="e-intro tc">
+        <h1 class="f1 tc fw9 mb3 mt3 pt3 p-name ">{{ title }}</h1>
+        <h2 class="f3 mid-gray lh-title p-summary">
+          {{introduction}}
+        </h2> 
+        <h4 class="tracked gray p-author"> By {{author}} on : {{ date}}</h4>
+      </section>
+
+      <div class="mw7 w-100 center e-content sans-serif f4 lh-copy link" id="content">
+      {{ content | safe}}
+      </div>
+
+    </article>
+{% endblock %}
