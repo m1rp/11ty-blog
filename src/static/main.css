@@ -1,0 +1,104 @@
+:root{
+	--color-bg: #fafafa;
+	--color-green: #64b6ac;
+	--color-green-light: #8ec9c2;
+	--color-green-dark: #49857e;
+	--color-orange: #fbd1a2;
+}
+
+.code{
+	font-family:monaco;
+	background-color: lightgrey;
+	width:100%;
+	display:block;
+}
+* {
+	font-family: 'Vollkorn', Verdana, Geneva, sans-serif;
+}
+
+html{
+	background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-green-dark);
+	font-family:'Oswald', Verdana, Geneva, sans-serif ;
+}
+
+a {
+	color: var(--color-green);
+}
+a:visited {
+	color: var(--color-green-dark)
+}
+
+a:focus,
+a:focus-within {
+	outline: 2px solid var(--color-orange);
+	border: 2px solid var(--color-orange);
+}
+
+nav {
+	border-bottom: .5rem solid var(--color-green);
+}
+nav > a, nav ul > a {
+	color: var(--color-green-dark);
+	font-family:'Oswald', Verdana, Geneva, sans-serif ;
+
+}
+a:hover {
+	color: var(--color-orange);
+	transition: all 0.5 linear;
+}
+
+button {
+	border: .5rem solid var(--color-green-dark);
+	line-height: 4rem;
+	background-color: inherit;
+}
+
+.boxed-link {
+	font-size: 1.5rem;
+	margin: 1.5rem;
+	color: var(--color-green);
+	text-align: center;
+	
+}
+
+.article-card{
+	border-bottom: 3px solid var(--color-green-light);
+}
+
+.article-card button {
+	border: none;
+	background: inherit
+}
+
+.article-card-text {
+	flex-grow:2;
+}
+
+p, #content{
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+	padding-top:2rem;
+}
+em{
+	font-family: inherit;
+}
+
+.e-intro{
+	border-bottom: .25rem solid var(--color-green-light);
+}

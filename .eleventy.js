@@ -1,15 +1,21 @@
 
-module.exports = function(eleventyConfig) {
-    // Filter source file names using a glob
-    eleventyConfig.addCollection("posts", function(collection) {
-        let posts = collection.getFilteredByGlob("src/posts/*.md").filter(each => each.exclude===false)
-        posts.forEach(post => post.data.layout="layouts/post.njk")
-        return posts
-    });
-   return {
-       dir: {
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addCollection("posts", collection =>
+        [...collection
+            .getFilteredByGlob("src/posts/*.md")
+            .filter(e => !e.data.draft || e.data.draft === false)
+            .reverse()
+        ]
+    );
+
+    return {
+        dir: {
             input: "src",
             output: "dist"
+        },
+        templateFormats: ["css", "njk", "md", "txt"],
+        htmlTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
+        passthroughFileCopy: true
     }
-}
 };

@@ -1,6 +1,6 @@
 ---
 title: posts index page
-exclude: true
+eleventyExcludeFromCollections: true
 layout: layouts/posts.njk
 ---
 

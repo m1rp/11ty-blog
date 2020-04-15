@@ -1,6 +1,6 @@
 ---
 title: index page
-layout: layouts/base.njk
+layout: layouts/home.njk
 ---
 
 # this is my index page

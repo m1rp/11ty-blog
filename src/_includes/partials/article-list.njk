@@ -1,0 +1,15 @@
+<section class="center w-100 mw7-l pa2 bw2 flex flex-row flex-wrap items-start mb3 article-card">
+  <a href={{post.url}} class="tl link underline-hover">
+    <h2>
+      {{post.data.title}}
+    </h2>
+  </a>
+  <div class="w-100 flex flex-row items-center justify-between">
+    {%if post.data.introduction %}
+      <p class="w-60 pb0">{{post.data.introduction}}</p>
+    {% endif %}
+      <span >
+        <h4 > {{ post.data.date }}</h4>
+      </span>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+{% extends "layouts/base.njk" %}
+
+  {% block content%}
+
+  <main class="center mw7 ma2">
+    <h1 class="f1 pa2">Posts:</h1>
+    <section>
+      <h1>{{title}}</h1>
+      {{content | safe}}
+      {% for post in collections.posts %}
+        {% include 'partials/article-list.njk' %}
+      {% endfor %}
+    </section>
+  </main>
+
+{% endblock content%}
