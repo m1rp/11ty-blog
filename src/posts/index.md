@@ -1,5 +1,5 @@
 ---
-title: posts index page
+title: All posts
 eleventyExcludeFromCollections: true
 layout: layouts/posts.njk
 ---

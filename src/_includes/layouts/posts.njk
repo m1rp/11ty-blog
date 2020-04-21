@@ -2,12 +2,13 @@
   {% block content%}
 
   <main class="center mw7 ma2">
-    <h1 class="f1 pa2">Posts:</h1>
+    <h1 class="f1 pa2">{{title}}:</h1>
     <section>
-      <h1>{{title}}</h1>
-      {{content | safe}}
-        {# {{partial "article-list.html" .}}
-      {{end}} #}
+      <section>
+      {% for post in collections.posts %}
+        {% include 'partials/article-list.njk' %}
+      {% endfor %}
+    </section>
     </section>
   </main>
 

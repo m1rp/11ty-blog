@@ -8,8 +8,7 @@ introduction  : An Unconf about climate change and tech
 draft         : true
 cover         : iguana.jpg
 cover_alt     : Big Iguana catching the sun of a leafy branch at Tortuguero National Parc, Costa Rica
-date          : 2019-05-25
-layout        : layouts/base.njk
+date          : "2019-05-25"
 ---
 
 ### session 1: train transport

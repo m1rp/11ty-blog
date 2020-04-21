@@ -7,7 +7,7 @@ author        : Sam
 introduction  : Contentful's monthly static site meetup 
 draft         : false
 cover         : img1.jpg
-date          : 2018-01-22
+date          : "2018-01-22"
 
 ---
 
