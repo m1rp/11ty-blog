@@ -56,7 +56,10 @@ nav > a, nav ul > a {
 	font-family:'Oswald', Verdana, Geneva, sans-serif ;
 
 }
-
+main{
+	min-height: 95vh;
+	height: 100%;
+}
 
 button {
 	border: .5rem solid var(--color-green-dark);
@@ -75,7 +78,9 @@ button {
 .article-card{
 	border-bottom: 3px solid var(--color-green-light);
 }
-
+.article-card:last-child{
+	border-bottom: none;
+}
 .article-card button {
 	border: none;
 	background: inherit
@@ -112,4 +117,10 @@ em{
 .intro p{
 	color: var(--color-green-dark);
 	font-family:'Oswald', Verdana, Geneva, sans-serif ;
+}
+
+footer {
+	padding: 1.5rem 0;
+	border-top: 3px solid var(--color-green-light);
+	height:3rem
 }

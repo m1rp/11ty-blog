@@ -2,10 +2,11 @@
 <html lang="en">
 {% include 'partials/head.njk' %}
 <body>
+<main>
     {% include "partials/navigation.njk" %}
-    
     {% block content %}
     {% endblock content %}
-</body>
+</main>
 {% include "partials/footer.njk"%}
+</body>
 </html>
