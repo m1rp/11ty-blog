@@ -4,6 +4,8 @@ module.exports = function (eleventyConfig) {
         [...collection
             .getFilteredByGlob("src/posts/*.md")
             .filter(e => !e.data.draft || e.data.draft === false)
+            .map(post => Object.assign(post, post.data.layout = "layouts/post.njk"))
+            // .map(post => ({ ...post, post: { data: { layout: "layouts/post.njk" } } }))
             .reverse()
         ]
     );

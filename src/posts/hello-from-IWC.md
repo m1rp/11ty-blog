@@ -8,7 +8,7 @@ introduction  : "Hello From Indie Web Camp"
 draft         : false
 cover         : "ohi.png"
 date          : "2017-11-05"
-layout        : layouts/base.njk
+layout        : layouts/post.njk
 
 ---
 
