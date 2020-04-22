@@ -22,7 +22,7 @@ I care a lot about our planet, but every day I'm reminded how fragile it is and 
 Over the past several years, my partner and I have drastically changed our lifestyle to match our ethical convictions. We've made two changes that are simultaneously quite straight forward to implement, but not that easy to stick to. Keep in mind, these changes are possible mainly because we're in a rather privileged position (both working full time, no kids, no debt and living in a European capital), and I'm fully aware that this is not the case for the majority of people.
 
 
-#### We've stopped consuming animal based products altogether.
+### We've stopped consuming animal based products altogether.
 
 For me, that meant completely changing my diet, cutting out all meat, cheese, butter, milk, honey... any animal food or by-product. I'd really love to be able to say: "It's really no big deal, it's super easy and requires literally no effort".
 
@@ -35,7 +35,7 @@ Or how over decades we have forgotten, or refuse to see, the link between the me
 Or where in the world the vegetables on our plate were cultivated, what kind of products had been applied to them and the effect that they have on us and on the planet.
 I could (and might) write more about this, as there's a lot to be said about our relation to food, how food can be sexist and patriarchal, or elitist and so on.
 
-#### We've also radically changed our purchasing habits.
+### We've also radically changed our purchasing habits.
 
 For food, we mainly buy organic, and try to stick to regional and seasonal produce when reasonable. This is quite restrictive and expensive, but no animal products and limiting exotic produce helps keep the price down.
 

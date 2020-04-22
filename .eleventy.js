@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
             input: "src",
             output: "dist"
         },
-        templateFormats: ["css", "njk", "md", "txt"],
+        templateFormats: ["css", "njk", "md", "txt", "ttf"],
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
         passthroughFileCopy: true

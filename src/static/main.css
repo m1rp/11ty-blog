@@ -14,8 +14,7 @@
 	display:block;
 }
 * {
-	font-family: 'Vollkorn', Verdana, Geneva, sans-serif;
-}
+	font-family: 'Merriweather', serif;}
 
 html{
 	background: var(--color-bg);
@@ -91,7 +90,7 @@ button {
 }
 
 p, #content{
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	line-height: 2rem;
 }
 
