@@ -1,3 +1,4 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("posts", collection =>
@@ -10,6 +11,7 @@ module.exports = function (eleventyConfig) {
         ]
     );
     eleventyConfig.addPlugin(pluginRss)
+    eleventyConfig.addPlugin(syntaxHighlight);
     return {
         dir: {
             input: "src",
