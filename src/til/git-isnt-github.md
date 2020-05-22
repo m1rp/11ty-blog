@@ -17,7 +17,7 @@ I realized this by cloning a repo, hosted on a virtual machine in GCP, at work t
 
 ANYWAY, the procedure is similar to the one used for cloning a repo from Github. 
 
-You need to have SSH access to the remote server. For that you need to generate a ssh key like so:
+We need to have SSH access to the remote server. For that we need to generate a ssh key like so:
 
 ```bash
 $ cd ~/.ssh && ssh-keygen -t rsa -b 4096 -C "email@example.com"
@@ -30,7 +30,9 @@ lets break that down a bit:
   - the ` -b` option specifies the number of bits in the key to create, in our command we're using `4096` bits,
   - finally, the ` -C` command is a comment, this will add our `email@example.com` to our public key (I believe that this is used on Github for authentication reasons, but i could be wrong.)
 
-Great, we have a `ssh` key pair, but we need to add the generated public key in the `authorized_keys` folder on the remote server. There are a couple of ways to do this. For each method you need to know the `ip` address of the server, and the `user`. You can define the user when setting up your server or virtual machine. Figuring out the `ip` might be a bit trickier if you don't have a static `ip` (in GCP you can request a static 'ip', or use their CLI that gives you access to all you servers). 
+Great, we have a `ssh` key pair, but we need to add the generated public key in the `authorized_keys` folder on the remote server.
+
+There are a couple of ways to do this. For each method you need to know the `ip` address of the server, and the `user`. You can define the user when setting up your server or virtual machine. Figuring out the `ip` might be a bit trickier if you don't have a static `ip` (in GCP you can request a static `ip`, or use their CLI that gives you access to all you servers). 
 
 ```bash
 ssh-copy-id -i ~/.ssh/my-new-sshkey user@host

@@ -5,6 +5,7 @@ tags          : [writing, blog, dev]
 categories    : [Tech]
 introduction  : How to make a URL shortener with Express and TypeScript
 date: "2020-05-07"
+draft: true
 ---
 
 ## I've always struggled with side projects.

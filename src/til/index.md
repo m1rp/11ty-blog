@@ -1,7 +1,7 @@
 ---
-title: All tils
+title: Today I learnt
 eleventyExcludeFromCollections: true
 layout: layouts/learnings.njk
 ---
 
-### the is a TIL index page
+### Today I learnt
