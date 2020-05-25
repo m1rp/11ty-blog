@@ -4,13 +4,13 @@ author: Sam
 tags          : [writing, blog, dev]
 categories    : [Tech]
 introduction  : How to make a URL shortener with Express and TypeScript
-date: "2020-05-07"
-draft: true
+date: "2020-05-25"
+draft: false
 ---
 
 ## I've always struggled with side projects.
 
-I find it really complicated to commit to an idea or a project until completion. they're either too small and not engaging (todo lists come to mind), or too intimidating (trying to contributing to open source projects fills me with self-doubt and imposter syndrome). Finding something that's just right is a real challenge.
+I find it really complicated to commit to an idea or a project until completion. They're either too small and not engaging (todo lists come to mind), or too intimidating (trying to contributing to open source projects fills me with self-doubt and imposter syndrome). Finding something that's just right is a real challenge.
 
 What I've found works for me is making small tool that I need or want, scratching my own itch so to speak, with the intention of actually using it. That second part is quite important to me, I can't stay motivated if I'm making something for no real reason. For me, actually making small things and launching them is the best way to learn something. 
 
@@ -20,7 +20,7 @@ There are 2 parts to this project:
   - the [code](#code)
   - the [deployment](#ops)
 
-I'm going to walk through what I've done with code examples (I might publish the code either on Github or Glitch) and how I deployed everything. It's worth mentionning that all the services I have used are free, with the exeption of of my domain name.
+I'm going to walk through what I've done with code examples and how I deployed everything. It's worth mentionning that all the services I have used are free, with the exeption of of my domain name.
 
 This API is made with [Express](https://expressjs.com/), [TypeScript](https://www.typescriptlang.org/) and [MongoDB](https://www.mongodb.com/), the API is hosted on [heroku](https://www.heroku.com), the database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), I got a domain name on [namecheap](https://www.namecheap.com/) and [Netlify](https://netlify.com) provides some DNS magic. 
 
@@ -37,6 +37,8 @@ For creating a Unique ID, we can a node package called `shortid` as we don't nee
 This API is an express app running on a heroku machine, but it could also be adapted to run as a cloud function (or lambda function) or using a different framework. 
 
 <h2 id="code">The Code </h2>
+
+*_you can find all the code to follow along [here](https://github.com/m1rp/url-shortener-example/tree/master)_*
 
 The Code is approximately structured as follows:
 
@@ -55,7 +57,7 @@ The Code is approximately structured as follows:
 |---- index.ts                 /* server and db init*/
 ```
 
-We won't be using views as we're only going to be interacting with various the Backend. Adding a  Frontend would require adding some form of authentication (to limit who can add and remove links) and that's out of scope.
+We won't be using views as we're only going to be interacting with the Backend. Adding a Frontend would require adding some form of authentication (to limit who can add and remove links) and that's out of scope.
 
 In the index file, we connect to our Mongodb instance, initialise our app and routes.
 
@@ -261,4 +263,29 @@ Let's set up or database, to do that we're going to go to [https://www.mongodb.c
 
 Once that is done, we need to create a user to read from and write to our database. We can give a username and password. Then we go back to our cluster dashboard and setup a connection. We'll chose the option to connect our application, this will provide us with a code snippet to add to our application. We've already added the snippet so we need to add our user, password and endpoint to our env variables.
 
-Now to deploy our service to [heroku](https://www.heroku.com), We can create a free account
+Now to deploy our service to [heroku](https://www.heroku.com).
+
+We can start by creating a free account on their homepage. Once that is done, I'd advise either using [Heroku's CLI](https://devcenter.heroku.com/articles/heroku-cli), or going to the "Deploy" page and selection the deployoment method that allows you to connect to github (this will allow you to automate your deployement process).
+
+Nearly there, not much left to configure! We need to add some Config Vars in the settings page. There are at least 4 that you'll need to provide, we defined them earlier in our app. 3 variables for connecting to the database, and one to specify the base URL of our shortened link
+
+```json
+BASE_URL=mysite.com/short-links/
+DB_PASS=my-database-password
+DB_USER=username
+DB_ENDPOINT=mongo.endpoint
+```
+
+You might want something catchier, but you'll need to add this URL as a custom domain to you heroku application. you might have already purchased a domain that you can add here. I had to be a bit more "creative", I have a domain already registered to my blog that is hosted with [Netlify](https://www.netlify.com/), I needed to add a new DNS record entry linked to my heroku app and also add that domain in Heroku. I'm not an expert on this stuff, but [Heroku's Documentation](https://devcenter.heroku.com/articles/custom-domains) is pretty solid!
+
+One issue you'll run into is with SSL certificates, I have not yet figured out a free way of getting these generated and applied to heroku.
+
+## Wrapping up
+
+I spent as much time writting this app as I did writting ABOUT it. But I've really enjoyed the whole process. Being able to mess about with something like this has been fun, I've learnt quite a bit, and being able to create and launch a service is really rewarding. The whole process has also prevented some burnout which is the biggest benefit.
+
+If I were doing this again, I'd ditch TypeScript. For such a small app, in my opinion, there's nearly no benefit. I'd have much quicker to get something up and running if I hadn't wasted half a day remembering to install types and figuring out that a response in express has a `express.Application.Response` type. I felt like i was spending a lot of time just fighting the TypeScript compiler when I could have been writting code. 
+
+I also re-discovered that Express is very minimal and un-opinionated, which is fine for my use case, but it does leave me feeling a bit lost when starting something from scratch (like: where do I put my routes? should I have controlers? what's a controller? Do I actually know what I'm doing? help).
+
+Anyway, this post is getting way too long. I hope you've enjoyed reading it and hopefully you learned something too!
