@@ -253,13 +253,14 @@ Now if we check our database, we should see that we have an entry. I would advis
 
 I added a `validator` function to my post and delete routes as I don't want anyone to be able to do whatever they want. Here you could use an authentication library or check for a token, or leave it as is if you're testing.
 
-That's pretty much it for the code. I'll create and share a repository on github so you can try it out for yourself. 
+That's pretty much it for the code. 
+
+You can try it out for yourself by [cloning the git repo](https://github.com/m1rp/url-shortener-example/tree/master) 
  
 
 <h2 id="ops">The deployment </h2>
 
-Let's set up or database, to do that we're going to go to [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas
-) and set up a free account. 
+Let's set up or database, to do that we're going to go to [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and set up a free account. 
 
 Once that is done, we need to create a user to read from and write to our database. We can give a username and password. Then we go back to our cluster dashboard and setup a connection. We'll chose the option to connect our application, this will provide us with a code snippet to add to our application. We've already added the snippet so we need to add our user, password and endpoint to our env variables.
 
