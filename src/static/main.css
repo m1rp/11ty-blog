@@ -123,3 +123,23 @@ footer {
 	border-top: 3px solid var(--color-green-light);
 	height:3rem
 }
+
+article {
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: [start] 1rem [gutter-left] 25% [content-start] auto [content-end] 25% [gutter-right]1rem[end];
+	grid-template-rows: [start] minmax(25vh, 100% ) [content] auto [footer] 100px [end] ;
+	grid-template-areas: 
+    "intro intro intro intro intro"
+    ". . main side ."
+    "footer footer footer footer footer";
+}
+
+.e-content {
+	grid-column: 3 / 4;
+	grid-row: content / footer;
+}
+.e-intro{
+	grid-column: start / end;
+	grid-row: start / content;
+}
