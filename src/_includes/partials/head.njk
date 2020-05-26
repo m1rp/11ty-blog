@@ -6,15 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Title" content="📰 - smcllw.me">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css"/>
-  <link rel="me" href="https://twitter.com/samclulow">
-  <link rel="me" href="mailto:sam.g.clulow@gmail.com">
-  <link rel="me" href="mailto:sam.clulow@springernature.com">
-  <link rel="me" href="https://github.com/m1rp">
-  <link rel="me" href="https://www.linkedin.com/in/sam-clulow-a2281b83/">
+ 
   <style>{% include "src/static/main.css" %}</style>
   <style>{% include "src/static/prism-ally-dark.css" %}</style>
   <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://smcllw.me{{page.url}}"/>  
-  <title>📰 - {{title}}</title>
+  {# syndication #}
+  <meta name="twitter:creator" content="@samclulow" />
+  <meta property="og:url" content="https://smcllw.me{{page.url}}" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:site_name" content="smcclw.me" />
+
+  {%if introduction%}
+  <meta property="og:description" content="{{introduction | safe}}" />
+  <meta name="twitter:card" content="{{introduction | safe}}" />
+  {%endif%}
+  
+  {%if page.url.includes('post')%}
+  <meta property="og:type" content="article" />
+  {%elif page.url.includes('til/')%}
+  <meta property="og:type" content="small article" />
+  {%endif%}
+  {%if page.date%}
+  <meta property="article:published_time" content="{{page.date}}" />
+  {%endif%}
+  <title>📰 - {{title}} </title>
 </head>

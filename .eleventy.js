@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
             .reverse()
         ]
     );
+    module.exports = function (eleventyConfig) {
+        eleventyConfig.setDataDeepMerge(true);
+    };
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(syntaxHighlight);
     return {
