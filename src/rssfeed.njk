@@ -36,4 +36,14 @@
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
+  {%- for til in collections.til %}
+  {% set absolutePostUrl %}{{ til.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ til.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ til.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ til.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
 </feed>
