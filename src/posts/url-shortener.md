@@ -15,29 +15,27 @@ I find it really complicated to commit to an idea or a project until completion.
 
 What I've found works for me is making small tool that I need or want, scratching my own itch so to speak, with the intention of actually using it. That second part is quite important to me, I can't stay motivated if I'm making something for no real reason. For me, actually making small things and launching them is the best way to learn something. 
 
-So I decided to make a URL shortener using [Express](https://expressjs.com/) and  [TypeScript](https://www.typescriptlang.org/)! It ticks all the boxes: it can be as simple or as over-engineered as I want, I get the opportunity to get familliar with a stack I don't use that often, and I can actually use it!
+So I decided to make a URL shortener! It ticks all the boxes: it can be as simple or as over-engineered as I want, I get the opportunity to get familiar with a stack I don't use that often, and I can actually use it!
 
 There are 2 parts to this project:
   - the [code](#code)
   - the [deployment](#ops)
 
-I'm going to walk through what I've done with code examples and how I deployed everything. It's worth mentionning that all the services I have used are free, with the exeption of of my domain name.
+I'm going to walk through what I've done with code examples and how I deployed everything. It's worth mentioning that all the services I have used are free, with the exception of of my domain name.
 
-This API is made with [Express](https://expressjs.com/), [TypeScript](https://www.typescriptlang.org/) and [MongoDB](https://www.mongodb.com/), the API is hosted on [heroku](https://www.heroku.com), the database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and [Netlify](https://netlify.com) provides some DNS magic. 
+This API is made with [Express](https://expressjs.com/), [TypeScript](https://www.typescriptlang.org/) and [MongoDB](https://www.mongodb.com/), the API is hosted on [heroku](https://www.heroku.com), the database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), I got a domain name on [namecheap](https://www.namecheap.com/) and [Netlify](https://netlify.com) provides some DNS magic. 
 
 Anyway, let's get started!
 
 ## Quick Technical Introduction
 
-What I decided to start off with was a minimal, feature free URL shortener. One way to acheive this is assign a unique ID to a submited URL and store that information somewhere. Then when someone requests that unique ID, redirect them to the original URL. 
+What I decided to start off with was a minimal, feature free URL shortener. One way to achieve this is assign a unique ID to a submitted URL and store that information somewhere. Then when someone requests that unique ID, redirect them to the original URL. 
 
 We'll store the URLs in a MongoDB instance, but this could also be achieved with different types of database, this could even be achieved using a service like [google sheets](https://docs.google.com/spreadsheets) or [airtable](https://airtable.com/)! 
 
-We're going to be using Express as it is quite minimal and our application doesn't need a complex framework.
-
 For creating a Unique ID, we can a node package called `shortid` as we don't need anything fancy.
 
-This API is an express app running on a heroku machine, but it could also be adapted to run as a cloud function (or lambda function) or using a different framework. 
+This API is an express app running on a Heroku machine, but it could also be adapted to run as a cloud function (or lambda function) or using a different framework. 
 
 <h2 id="code">The Code </h2>
 
@@ -120,7 +118,7 @@ Let's define the data model for our Links! We're also going to create an `Interf
 
 For describing and using our data, we create a `Schema`. According to the Mongoose website, a `Schema` describes the shape of our `Documents` in a `Collection`. For a more in depth explanation please check out the [mongoose guide](https://mongoosejs.com/docs/guide.html)
 
-It really sounds like we're doing the same thing twice, and we kind of are. The `Interface` is the description of the object used by typescript and it is completly optional. On the other hand, the `Schema` is the description of the object that will be stored in our database and this is not optional.
+It really sounds like we're doing the same thing twice, and we kind of are. The `Interface` is the description of the object used by typescript and it is completely optional. On the other hand, the `Schema` is the description of the object that will be stored in our database and this is not optional.
 
 ```ts
 // models/links.ts
@@ -227,7 +225,7 @@ export const deleteLink = async ( req: Request, res: Response ): Promise<void> =
 A couple of things worth noting:
   - the error handling is nearly none existent
   - in our `createLink` function, we don't check if the GID already exists.
-  - `getLinkById` will redirect us directly to our original link, but will also increment a links popularity. This could be extended to include other data to give you some feedback on how many hits your blog post gets comming from one specific source without needing to implement any user tracking.
+  - `getLinkById` will redirect us directly to our original link, but will also increment a links popularity. This could be extended to include other data to give you some feedback on how many hits your blog post gets coming from one specific source without needing to implement any user tracking.
 
 
 Ok we're halfaway there! Let's get our routing sorted:
@@ -244,7 +242,7 @@ export const routes = ( app: Application ) => {
 };
 ```
 
-We have our 3 routes using our 3 functions. There are a few ways to test these endpoints, we could use a tool like [postman](https://www.postman.com/) or [insomnia](https://insomnia.rest/) to query our API and save those queries, or we can use the `curl` tool in our terminal. Lets ignore (or remove) the `validator` function for the moment and try to create a link with the followng `curl` command:
+We have our 3 routes using our 3 functions. There are a few ways to test these endpoints, we could use a tool like [postman](https://www.postman.com/) or [insomnia](https://insomnia.rest/) to query our API and save those queries, or we can use the `curl` tool in our terminal. Lets ignore (or remove) the `validator` function for the moment and try to create a link with the following `curl` command:
 
 ```bash
 curl --header "Content-Type: application/json" \
@@ -258,20 +256,20 @@ I added a `validator` function to my post and delete routes as I don't want anyo
 
 That's pretty much it for the code. 
 
-You can try it out for yourself by [cloning the git repo](https://github.com/m1rp/url-shortener-example/tree/master) 
+You can try it out for yourself by [cloning the repo on Github](https://github.com/m1rp/url-shortener-example/tree/master) 
  
 
-<h2 id="ops">The deployment </h2>
+<h2 id="ops">The Deployment </h2>
 
 Let's set up or database, to do that we're going to go to [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and set up a free account. 
 
-Once that is done, we need to create a user to read from and write to our database. We can give a username and password. Then we go back to our cluster dashboard and setup a connection. We'll chose the option to connect our application, this will provide us with a code snippet to add to our application. We've already added the snippet so we need to add our user, password and endpoint to our env variables.
+Once that is done, we need to create a user to read from and write to our database. We can give a username and password. Then we go back to our cluster dashboard and setup a connection. We'll chose the option to connect our application, this will provide us with a code snippet to add to our application. We've already added the snippet so we need to add our user, password and endpoint to our ENV variables.
 
-Now to deploy our service to [heroku](https://www.heroku.com).
+Now to deploy our service to [Heroku](https://www.heroku.com).
 
-We can start by creating a free account on their homepage. Once that is done, I'd advise either using [Heroku's CLI](https://devcenter.heroku.com/articles/heroku-cli), or going to the "Deploy" page and selection the deployoment method that allows us to connect to github and automate our deployement process.
+We can start by creating a free account on their homepage. Once that is done, I'd advise either using [Heroku's CLI](https://devcenter.heroku.com/articles/heroku-cli), or going to the "Deploy" page and selection the deployment method that allows you to connect to Github (this will allow you to automate your deployment process).
 
-Nearly there, not much left to configure! We need to add some Config Vars in the settings page. There are at least four that we need to provide, we defined them earlier in our app. Three variables for connecting to the database, and one to specify the base URL of our shortened link
+Nearly there, not much left to configure! We need to add some Config Vars in the settings page. There are at least 4 that you'll need to provide, we defined them earlier in our app. 3 variables for connecting to the database, and one to specify the base URL of our shortened link
 
 ```json
 BASE_URL=mysite.com/short-links/
@@ -280,16 +278,16 @@ DB_USER=username
 DB_ENDPOINT=mongo.endpoint
 ```
 
-You might want something catchier, but you'll need to add this URL as a custom domain to you heroku application. you might have already purchased a domain that you can add here. I had to be a bit more "creative", I have a domain already registered to my blog that is hosted with [Netlify](https://www.netlify.com/), I needed to add a new DNS record entry linked to my heroku app and also add that domain in Heroku. I'm not an expert on this stuff, but [Heroku's Documentation](https://devcenter.heroku.com/articles/custom-domains) is pretty solid!
+You might want something catchier, but you'll need to add this URL as a custom domain to you Heroku application. you might have already purchased a domain that you can add here. I had to be a bit more "creative", I have a domain already registered to my blog that is hosted with [Netlify](https://www.netlify.com/), I needed to add a new DNS record entry linked to my Heroku app and also add that domain in Heroku. I'm not an expert on this stuff, but [Heroku's Documentation](https://devcenter.heroku.com/articles/custom-domains) is pretty solid!
 
-One issue you'll run into is with SSL certificates, I have not yet figured out a free way of getting these generated and applied to heroku. But this problem is automatically solved by upgrading your Dyno.
+One issue you'll run into is with SSL certificates, I have not yet figured out a free way of getting these generated and applied to Heroku.
 
 ## Wrapping up
 
-I spent as much time writting this app as I did writting ABOUT it. But I've really enjoyed the whole process. Being able to mess about with something like this has been fun, I've learnt quite a bit, and being able to create and launch a service is really rewarding. The whole process has also prevented some burnout which is the biggest benefit.
+I spent as much time writing this app as I did writing ABOUT it. But I've really enjoyed the whole process. Being able to mess about with something like this has been fun, I've learnt quite a bit, and being able to create and launch a service is really rewarding. The whole process has also prevented some burnout which is the biggest benefit.
 
-If I were doing this again, I'd ditch TypeScript. For such a small app, in my opinion, there's nearly no benefit. I'd have much quicker to get something up and running if I hadn't wasted half a day remembering to install types and figuring out that a response in express has a `express.Application.Response` type. I felt like i was spending a lot of time just fighting the TypeScript compiler when I could have been writting code. 
+If I were doing this again, I'd ditch TypeScript. For such a small app, in my opinion, there's nearly no benefit. I'd have much quicker to get something up and running if I hadn't wasted half a day remembering to install types and figuring out that a response in express has a `express.Application.Response` type. I felt like i was spending a lot of time just fighting the TypeScript compiler when I could have been writing code. 
 
-I also re-discovered that Express is very minimal and un-opinionated, which is fine for my use case, but it does leave me feeling a bit lost when starting something from scratch (like: where do I put my routes? should I have controlers? what's a controller? Do I actually know what I'm doing? help).
+I also re-discovered that Express is very minimal and un-opinionated, which is fine for my use case, but it does leave me feeling a bit lost when starting something from scratch (like: where do I put my routes? should I have controllers? what's a controller? Do I actually know what I'm doing? help).
 
-Anyway, this post is getting way too long. I hope you've enjoyed reading it and hopefully you learned something too!
+Anyway, I hope you've enjoyed reading it and hopefully you learned something too!
