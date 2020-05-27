@@ -1,10 +1,11 @@
 ---
-title: making a URL shortener
+title: How to make a URL shortener with Express and TypeScript
+introduction: A step by step guide to make a URL shortening service with Express and Typescript
 author: Sam
-tags          : [writing, blog, dev]
+tags          : [nodejs, expressjs,typescript, dev]
 categories    : [Tech]
-introduction  : How to make a URL shortener with Express and TypeScript
 date: "2020-05-25"
+edit: "2020.05-27"
 draft: false
 ---
 
@@ -14,7 +15,7 @@ I find it really complicated to commit to an idea or a project until completion.
 
 What I've found works for me is making small tool that I need or want, scratching my own itch so to speak, with the intention of actually using it. That second part is quite important to me, I can't stay motivated if I'm making something for no real reason. For me, actually making small things and launching them is the best way to learn something. 
 
-So I decided to make a URL shortener! It ticks all the boxes: it can be as simple or as over-engineered as I want, I get the opportunity to get familliar with a stack I don't use that often, and I can actually use it!
+So I decided to make a URL shortener using [Express](https://expressjs.com/) and  [TypeScript](https://www.typescriptlang.org/)! It ticks all the boxes: it can be as simple or as over-engineered as I want, I get the opportunity to get familliar with a stack I don't use that often, and I can actually use it!
 
 There are 2 parts to this project:
   - the [code](#code)
@@ -22,7 +23,7 @@ There are 2 parts to this project:
 
 I'm going to walk through what I've done with code examples and how I deployed everything. It's worth mentionning that all the services I have used are free, with the exeption of of my domain name.
 
-This API is made with [Express](https://expressjs.com/), [TypeScript](https://www.typescriptlang.org/) and [MongoDB](https://www.mongodb.com/), the API is hosted on [heroku](https://www.heroku.com), the database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), I got a domain name on [namecheap](https://www.namecheap.com/) and [Netlify](https://netlify.com) provides some DNS magic. 
+This API is made with [Express](https://expressjs.com/), [TypeScript](https://www.typescriptlang.org/) and [MongoDB](https://www.mongodb.com/), the API is hosted on [heroku](https://www.heroku.com), the database is hosted on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and [Netlify](https://netlify.com) provides some DNS magic. 
 
 Anyway, let's get started!
 
@@ -31,6 +32,8 @@ Anyway, let's get started!
 What I decided to start off with was a minimal, feature free URL shortener. One way to acheive this is assign a unique ID to a submited URL and store that information somewhere. Then when someone requests that unique ID, redirect them to the original URL. 
 
 We'll store the URLs in a MongoDB instance, but this could also be achieved with different types of database, this could even be achieved using a service like [google sheets](https://docs.google.com/spreadsheets) or [airtable](https://airtable.com/)! 
+
+We're going to be using Express as it is quite minimal and our application doesn't need a complex framework.
 
 For creating a Unique ID, we can a node package called `shortid` as we don't need anything fancy.
 
@@ -266,9 +269,9 @@ Once that is done, we need to create a user to read from and write to our databa
 
 Now to deploy our service to [heroku](https://www.heroku.com).
 
-We can start by creating a free account on their homepage. Once that is done, I'd advise either using [Heroku's CLI](https://devcenter.heroku.com/articles/heroku-cli), or going to the "Deploy" page and selection the deployoment method that allows you to connect to github (this will allow you to automate your deployement process).
+We can start by creating a free account on their homepage. Once that is done, I'd advise either using [Heroku's CLI](https://devcenter.heroku.com/articles/heroku-cli), or going to the "Deploy" page and selection the deployoment method that allows us to connect to github and automate our deployement process.
 
-Nearly there, not much left to configure! We need to add some Config Vars in the settings page. There are at least 4 that you'll need to provide, we defined them earlier in our app. 3 variables for connecting to the database, and one to specify the base URL of our shortened link
+Nearly there, not much left to configure! We need to add some Config Vars in the settings page. There are at least four that we need to provide, we defined them earlier in our app. Three variables for connecting to the database, and one to specify the base URL of our shortened link
 
 ```json
 BASE_URL=mysite.com/short-links/
@@ -279,7 +282,7 @@ DB_ENDPOINT=mongo.endpoint
 
 You might want something catchier, but you'll need to add this URL as a custom domain to you heroku application. you might have already purchased a domain that you can add here. I had to be a bit more "creative", I have a domain already registered to my blog that is hosted with [Netlify](https://www.netlify.com/), I needed to add a new DNS record entry linked to my heroku app and also add that domain in Heroku. I'm not an expert on this stuff, but [Heroku's Documentation](https://devcenter.heroku.com/articles/custom-domains) is pretty solid!
 
-One issue you'll run into is with SSL certificates, I have not yet figured out a free way of getting these generated and applied to heroku.
+One issue you'll run into is with SSL certificates, I have not yet figured out a free way of getting these generated and applied to heroku. But this problem is automatically solved by upgrading your Dyno.
 
 ## Wrapping up
 
