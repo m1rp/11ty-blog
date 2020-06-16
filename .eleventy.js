@@ -19,6 +19,14 @@ module.exports = function (eleventyConfig) {
             .reverse()
         ]
     );
+    eleventyConfig.addCollection("tags", collection =>
+        [...collection
+            .getFilteredByGlob("src/til/*.md")
+            .filter(e => !e.data.draft || e.data.draft === false)
+            .map(post => (post.data.tags.forEach(elt=> {return elt} )))
+        ]
+    )
+    console.log(eleventyConfig.collection)
     module.exports = function (eleventyConfig) {
         eleventyConfig.setDataDeepMerge(true);
     };
@@ -29,7 +37,7 @@ module.exports = function (eleventyConfig) {
             input: "src",
             output: "dist"
         },
-        templateFormats: ["css", "njk", "md", "txt", "ttf"],
+        templateFormats: ["css", "njk", "md", "txt", "ttf", "pdf"],
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
         passthroughFileCopy: true
