@@ -1,11 +1,11 @@
-<section class="center w-100 mw7-l pa2 bw2 flex flex-row flex-wrap items-start mb3 article-card">
+<section class="center w-100 mw7-l bw2 flex flex-row flex-wrap items-start mb3 article-card">
   <a href={{post.url}} class="link">
     <h2>
       {{post.data.title}}
     </h2>
   </a>
   <div class="w-100 flex flex-row items-center justify-between">
-    <div class="w-60 pb0">
+    <div class="w-60 pb0 exerpt">
       {%if post.data.introduction %}
         <p >{{post.data.introduction}}</p>
       {% endif %}

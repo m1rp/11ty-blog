@@ -14,7 +14,8 @@
 	display:block;
 }
 html {
-	font-family: 'Merriweather', serif;}
+	font-family: 'Merriweather', serif;
+}
 
 html{
 	background: var(--color-bg);
@@ -76,6 +77,7 @@ button {
 
 .article-card{
 	border-bottom: 3px solid var(--color-green-light);
+	margin-top: 1rem;
 }
 .article-card:last-child{
 	border-bottom: none;
@@ -88,7 +90,12 @@ button {
 .article-card-text {
 	flex-grow:2;
 }
-
+.article-card h2 {
+	margin: .5rem 0
+}
+.article-card .exerpt {
+	margin-top: 1rem
+}
 p, #content{
 	font-size: 1rem;
 	line-height: 1.7rem;
@@ -102,6 +109,7 @@ p, #content{
 #content h6 {
 	padding-top:2rem;
 }
+
 em{
 	font-family: inherit;
 }
