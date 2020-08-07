@@ -1,9 +1,14 @@
 {% extends "layouts/base.njk" %}
   {% block content%}
 
-  <main class="center mw7 ma2">
-    <h1 class="f1 pa2">{{title}}:</h1>
-      <section>
+ <main >
+   <div class="banner-color hero">
+      <div class="wrapper center mw7 pa2 intro">
+      <h1 class="f1 pa2">{{title}}:</h1>
+      </div>
+    </div>
+  
+    <section class="center mw7 ma2">
       {% for post in collections.til %}
         {% include 'partials/article-list.njk' %}
       {% endfor %}

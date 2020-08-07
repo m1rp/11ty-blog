@@ -1,23 +1,36 @@
-:root{
-	--color-bg: #fafafa;
-	--color-green: #64b6ac;
-	--color-green-light: #8ec9c2;
-	--color-green-dark: #49857e;
-	--color-orange: #fbd1a2;
-	--color-black: #111111
+:root {
+  --color-bg: #F2F7F2; /*MINT GREEN GOOD KEEP IT*/
+  --color-banner-bg:#F2F7F2;
+
+
+  --color-green-dark: #478565; /* VIRIDIAN GOOD KEEP IT */
+  --color-green: #509170; /* Illuminating emerald GOOD KEEP IT */
+  --color-green-extralight: #C4DECF; /* Shiny Shamrock GOOD KEEP IT */
+  --color-green-light:#96C5AC; /* eton blue GOOD KEEP IT */
+  --color-blue: #004FE0;
+  --color-blue-light: #1F6DFF;
+  --color-blue-dark:#0039A3;
+
+  --color-headline:#1A1D1A; /* EERIE BLACK, GOTH AF, GOOD KEEP IT*/
+  --color-paragraph:#0A0B0A; /* , GOOD KEEP IT*/
+  /* --color-link:#498467 VIRIDIAN GOOD KEEP IT */
 }
 
-.code{
-	font-family:monaco;
-	background-color: lightgrey;
-	width:100%;
-	display:block;
+.code {
+  font-family: monaco;
+  background-color: lightgrey;
+  width: 100%;
+  display: block;
+}
+
+.banner-color { 
+  width: 100%;
+  background-color: var(--color-green-extralight);
 }
 html {
-	font-family: 'Merriweather', serif;}
-
-html{
-	background: var(--color-bg);
+  font-family: "Merriweather", serif;
+  background: var(--color-bg);
+  color: var(--color-paragraph);
 }
 
 h1,
@@ -26,100 +39,125 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--color-green-dark);
-	font-family:'Oswald', Verdana, Geneva, sans-serif ;
-}
-a,
-a > * {
-	color: var(--color-green);
-	text-decoration: underline;		
-}
-a:visited {
-	color: var(--color-green-dark)
+  color: var(--color-headline);
+  font-family: "Open Sans", Verdana, Geneva, sans-serif;
 }
 
-a:focus,
-a:focus > *,
-a:hover,
-a:hover >* {
-	background-color: var(--color-orange);
-	color: var(--color-black);
-	transition: all 0.1 linear;
-}
+
 
 nav {
-	border-bottom: .5rem solid var(--color-green);
+  border-bottom: 0.5rem solid var(--color-green);
+  font-family: "Open Sans", Verdana, Geneva, sans-serif;
+  color: var(--color-headline);
+  font-weight: 700;
 }
-nav > a, nav ul > a {
-	color: var(--color-green-dark);
-	font-family:'Oswald', Verdana, Geneva, sans-serif ;
 
+nav a,
+nav a:visited {
+  color: var(--color-headline);
+  text-decoration: none;
 }
-main{
-	min-height: 95vh;
-	height: 100%;
+
+a{
+  color: var(--color-headline);
+  text-decoration: underline;
+}
+
+
+
+a:focus,
+a:hover {
+  color: var(--color-blue-dark);
+  outline: dashed;
+}
+
+main {
+  min-height: 95vh;
+  height: 100%;
 }
 
 button {
-	border: .5rem solid var(--color-green-dark);
-	line-height: 4rem;
-	background-color: inherit;
+  border: 0.5rem solid var(--color-green-dark);
+  line-height: 4rem;
+  background-color: inherit;
 }
 
 .boxed-link {
-	font-size: 1.5rem;
-	margin: 1.5rem;
-	color: var(--color-green);
-	text-align: center;
-	
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  color: var(--color-green);
+  text-align: center;
 }
 
-.article-card{
-	border-bottom: 3px solid var(--color-green-light);
+.article-card {
+  border-bottom: 3px solid var(--color-green-light);
 }
-.article-card:last-child{
-	border-bottom: none;
+
+.article-card:last-child {
+  border-bottom: none;
 }
+
 .article-card button {
-	border: none;
-	background: inherit
+  border: none;
+  background: inherit;
 }
 
 .article-card-text {
-	flex-grow:2;
+  flex-grow: 2;
 }
 
-p, #content{
-	font-size: 1rem;
-	line-height: 1.7rem;
+p, .content {
+  font-size: 1.125rem;
+  line-height: 1.8rem; 
+}
+.content a {
+  color: var(--color-blue);
+}
+.content a:visited{
+  color: var(--color-blue-light);
 }
 
-#content h1,
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6 {
-	padding-top:2rem;
-}
-em{
-	font-family: inherit;
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  padding-top: 2rem;
 }
 
-.e-intro{
-	border-bottom: .25rem solid var(--color-green-light);
+em {
+  font-family: inherit;
 }
 
-.intro h1{
-	font-size: 3rem;
+
+.hero{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.intro p{
-	color: var(--color-green-dark);
-	font-family:'Oswald', Verdana, Geneva, sans-serif ;
+.e-intro {
+  border-bottom: 0.25rem solid var(--color-green-light);
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.intro h1 {
+  font-size: 3rem;
+}
+.intro p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  
 }
 
 footer {
-	padding: 1.5rem 0;
-	border-top: 3px solid var(--color-green-light);
-	height:3rem
+  padding: 1.5rem 0;
+  border-top: 3px solid var(--color-green-light);
+  height: 3rem;
 }

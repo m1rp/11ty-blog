@@ -2,15 +2,21 @@
 
   {% block content%}
 
-  <main class="center mw7 ma2">
-    <section class="intro mv5 pv4">
-      {{ content |safe }}
-    </section>
+  <main >
+    <div class="banner-color hero">
+      <div class="wrapper center mw7 pa2 intro">
+        <section class="">
+          {{ content |safe }}
+        </section>
+      </div>
+    </div>
     <section>
-      <h2>Latest posts</h2>
-      {% for post in collections.posts %}
-        {% include 'partials/article-list.njk' %}
-      {% endfor %}
+        <div class="wrapper center mw7 ma2">
+        <h2>Latest posts</h2>
+        {% for post in collections.posts %}
+          {% include 'partials/article-list.njk' %}
+        {% endfor %}
+        </div>
     </section>
   </main>
 
