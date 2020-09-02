@@ -1,7 +1,9 @@
 ---
 title         : "Future"
 slug          : "future"
-tags          : ["writing", "blog", "learning", "documenting"]
+tags          : 
+  - writing
+  - blog
 categories    : ["dev"]
 author        : "Sam"
 introduction  : "writing about the future in the hope that I'll stick to writing things"

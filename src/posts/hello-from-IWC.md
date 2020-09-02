@@ -1,7 +1,8 @@
 ---
 title         : "Hello From IWC"
 slug          : "IWC-2017"
-tags          : ["indie-web-camp", "blog", "hack", "meetup"]
+tags          : 
+    - meetup
 categories    : ["meetup"]
 author        : "Sam"
 introduction  : "Hello From Indie Web Camp"

@@ -1,7 +1,10 @@
 ---
 title        : "Our Green Planet"
 slug         : "green"
-tags         : ["writing", "blog", "ecology"]
+tags         : 
+    - writing
+    - blog
+    - ecology
 categories   : ["writing"]
 author       : "Sam"
 introduction : "Our Planet, Our Problem"

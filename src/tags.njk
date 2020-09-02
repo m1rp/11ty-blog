@@ -1,0 +1,28 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag }}/
+---
+{% extends "layouts/base.njk" %}
+  {% block content%}
+
+  <main >
+   <div class="banner-color hero">
+      <div class="wrapper center mw7 pa2 intro">
+      <h1 class="f1 pa2">Tagged “{{ tag }}”:</h1>
+      </div>
+    </div>
+  
+    <section class="center mw7 ma2">
+     {% set taglist = collections[ tag ] %}
+      {% for post in taglist | reverse %}
+        {% include 'partials/article-list.njk' %}
+      {% endfor %}
+    </section>
+  </main>
+
+{% endblock content%}

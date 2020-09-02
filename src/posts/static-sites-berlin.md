@@ -1,7 +1,9 @@
 ---
 title         : Static Sites Berlin
 slug          : ssb-2-berlin
-tags          : [Contentful, blog, ]
+tags          : 
+  - Contentful
+  - blog
 categories    : [TIL]
 author        : Sam
 introduction  : Contentful's monthly static site meetup 

@@ -2,7 +2,10 @@
 title: How to make a URL shortener with Express and TypeScript
 introduction: A step by step guide to make a URL shortening service with Express and Typescript
 author: Sam
-tags          : [nodejs, expressjs,typescript, dev]
+tags          : 
+  - nodejs
+  - expressjs
+  - typescript
 categories    : [Tech]
 date: "2020-05-25"
 edit: "2020.05-27"
