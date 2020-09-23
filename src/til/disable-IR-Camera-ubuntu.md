@@ -23,7 +23,7 @@ and this config to the `usb_modeswitch` udev rules
 ## Step by Step
 
 - find vendor and product id of camera
-  ```
+  ```bash
   birb@box: dmesg | grep 'Camera'
   [    2.093051] usb 1-5: Product: Integrated IR Camera
   [    3.104388] usb 1-8: Product: Integrated Camera
@@ -35,20 +35,20 @@ and this config to the `usb_modeswitch` udev rules
   [    4.656206] input: Integrated Camera: Integrated C as /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/input/input12
   ```
 - create config file for this device that will detach driver from device
-  ```
+  ```bash
   birb@box: echo "echo DetachStorageOnly=1 > /etc/usb_modeswitch.d/5986:1141" |
   sudo zsh
   ```
 - open `/lib/udev/rules.d/40-usb_modeswitch.rules` and add these lines before
 	the end to apply config on startup 
-	```
+	```bash
 	# IR Camera
   ATTR{idVendor}=="5986", ATTR{idProduct}=="1141", RUN+="usb_modeswitch '%k'"
 	```
 
 ## Important 
 
-make suure that you add `==` not `=`, an error in the rules will break the
+make sure that you add `==` not `=`, an error in the rules will break the
 whole system and require looking for a usb key with and ubuntu image, booting
 from usb and looking everywhere to find where to fix your mistake (... ask me
 how I found that out) 
