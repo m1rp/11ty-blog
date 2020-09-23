@@ -36,8 +36,7 @@ and this config to the `usb_modeswitch` udev rules
   ```
 - create config file for this device that will detach driver from device
   ```bash
-  birb@box: echo "echo DetachStorageOnly=1 > /etc/usb_modeswitch.d/5986:1141" |
-  sudo zsh
+  birb@box: echo "echo DetachStorageOnly=1 > /etc/usb_modeswitch.d/5986:1141" | sudo zsh
   ```
 - open `/lib/udev/rules.d/40-usb_modeswitch.rules` and add these lines before
 	the end to apply config on startup 
