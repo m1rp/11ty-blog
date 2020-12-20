@@ -1,8 +1,6 @@
 :root {
   --color-bg: #F2F7F2; /*MINT GREEN GOOD KEEP IT*/
   --color-banner-bg:#F2F7F2;
-
-
   --color-green-dark: #478565; /* VIRIDIAN GOOD KEEP IT */
   --color-green: #509170; /* Illuminating emerald GOOD KEEP IT */
   --color-green-extralight: #C4DECF; /* Shiny Shamrock GOOD KEEP IT */
@@ -10,10 +8,8 @@
   --color-blue: #004FE0;
   --color-blue-light: #1F6DFF;
   --color-blue-dark:#0039A3;
-
   --color-headline:#1A1D1A; /* EERIE BLACK, GOTH AF, GOOD KEEP IT*/
   --color-paragraph:#0A0B0A; /* , GOOD KEEP IT*/
-  /* --color-link:#498467 VIRIDIAN GOOD KEEP IT */
 }
 
 .code {

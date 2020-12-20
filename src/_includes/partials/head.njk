@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Title" content="📰 - smcllw.me">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css"/>
- 
   <style>{% include "src/static/main.css" %}</style>
   <style>{% include "src/static/prism-ally-dark.css" %}</style>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
@@ -17,12 +16,10 @@
   <meta property="og:url" content="https://smcllw.me{{page.url}}" />
   <meta property="og:title" content="{{title}}" />
   <meta property="og:site_name" content="smcclw.me" />
-
   {%if introduction%}
   <meta property="og:description" content="{{introduction | safe}}" />
   <meta name="twitter:card" content="{{introduction | safe}}" />
   {%endif%}
-  
   {%if page.url.includes('post')%}
   <meta property="og:type" content="article" />
   {%elif page.url.includes('til/')%}
