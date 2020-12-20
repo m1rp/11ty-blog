@@ -4,9 +4,10 @@ slug            : books-2020
 author          : Sam
 tags            : [writing, reading, pessimism]
 categories      : [Books]
-introduction    : looking back on this year and what I read.
+introduction    : This started out as a light hearted recap of what I read and quickly devolved into a bit of a train wreck. Sorry.
 date            : "2020-12-18"
 ---
+
 I Started this year by making a short list of things I wanted to accomplish in the following 12 months. I did this in the before times. Simpler times when no one was expecting a pandemic and a year's worth of lockdown. 
 
 One of my goals was to read more. I originally set a goal that wouldn't be too hard to acheive but that would still force me to change my reading habits: finish reading 12 books in the year, at least 50% of them not written by men. I had 2 books carried over from the previous year, but reading one book a month seemed like a nice pace. The real difficulty would be adding some diversity. A couple of years ago, my wife decided that for a set amount of time she'd make an effort to read books exclusively written by women and she got a lot out of the experience. It's about supporting women authors, changing perspective and reading different types of books. So thanks to her experience I decided to do something similar, albeit not to the same extent. My excuse is that I already had several books by blokes in my queue. In reality, if you'd have asked me to name 5 non-male authors I don't think I'd have managed, so the idea of completly discarding my references was unsettling.
@@ -19,7 +20,9 @@ On the 25th of May, George Floyd was killed in broad daylight while pedestrians 
 
 Wild fires tore through the pacific coast of the States; The melting of Siberian permafrost released more green-house gases than expected and 2020 was, once again, one of the hotest and driest years since time immemorial. The pandemic is an urgent matter that needs to be resolved, but its effects will pale in comparison to the effects of climate change.
 
-Then the second half of the year started. At this point time started to lose most of it's meaning. But 2020 is the gift that keeps on giving.
+This was all in the first half of the year.
+
+The Second half wasn't much better.
 
 In the USA, a white 17 year old proud boy took an assault rifle to a protest and shot several people, killing 2 of them, before being peacefully escorted by the police. His 2 million dollar bail was paid through crowdfunding.
 
