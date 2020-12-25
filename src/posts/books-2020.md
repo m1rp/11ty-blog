@@ -38,7 +38,7 @@ Apparently, freedom of expression is only allowed to those in a priviledge posit
 
 Half way through the year, I decided to expand the scope of my readings. I took the decision to also include non-white authors into my reading list. It's quite embarassing that not only could I not name 5 women authors, I couldn't easily name 5 non-white authors. I know that life is a journey and you learn along the way, that's good and all but it's really fucking embarrassing to get to your thirties and just start to realize that a) your existence and life is built on white supremacy and b) that point 'a' is a problem.
 
-2020 has been, to put it mildly, pretty shit. I originally just wanted to share what I read and give a bit of context about what I chose, then things got out of hand.
+2020 has been, to put it mildly, pretty shit. I originally just wanted to share what I read and give a bit of context about what I chose, then things got out of hand. I personally had a good year, got into my new job, managed to go to Austria for a short break, got into birding. I'm also in a quite secure and priviledged position, I was able to work from home quite easily, I didn't suffer form loneliness as much as most people have.
 
 I feel inadequate writting about having read some books as if it's some kind of accomplishement. I actually learned some great stuff from all of this and I'm really happy to have kept at it and to have read more than planned. But it's honestly risible to be treating this as if it is in any way important considering that the death count for COVID is over 1.5 million.
 
