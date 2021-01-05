@@ -158,5 +158,8 @@ footer {
   height: 3rem;
 }
 tr:nth-child(even){
-  background-color: #C4DECF ;
+  background-color: #C4DECF;
+}
+tr:nth-child(even) td{
+border-color: #C4DECF;
 }
