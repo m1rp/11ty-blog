@@ -44,8 +44,8 @@ I feel inadequate writting about having read some books as if it's some kind of 
 
 Anyway here's the fuckin list (chronological order):
 
-|title | Author|emoji review|
-|---|---|---|
+|title   |Author   |emoji review   
+|:---  |:---   |:---:   |
 |Crime and Punishement | Dostoyevsky| 😐|
 |Thinking Fast and Slow | Daniel Kahneman| 😐|
 |Dernières nouvelles de la science | Mathieu Vidard|👍|
@@ -68,4 +68,4 @@ Anyway here's the fuckin list (chronological order):
 |The Fire Next Time | James Baldwin| 😍|
 |The New Jim Crow; Mass Incarceration in the Age of Colorblindness | Michelle Alexander| 😍|
 |Headscarves and Hymens; Why the Middle East needs a Sexual Revolution | Mona Eltahawy| 😍|
-|The Age of Surveillance Capitalism | Shoshanna Zuboff| not finished yet but 👍 so far |
+|The Age of Surveillance Capitalism | Shoshanna Zuboff| 😍 |

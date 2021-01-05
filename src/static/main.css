@@ -157,3 +157,6 @@ footer {
   border-top: 3px solid var(--color-green-light);
   height: 3rem;
 }
+tr:nth-child(even){
+  background-color: #C4DECF ;
+}
