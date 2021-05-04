@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include 'partials/head.njk' %}
-<body>
-<main>
+<body class="u-container">
     {% include "partials/navigation.njk" %}
-    {% block content %}
+    <main class="u-container">
+     {% block content %}
     {% endblock content %}
-</main>
+    </main>
 {% include "partials/footer.njk"%}
 </body>
 </html>

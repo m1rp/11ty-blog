@@ -5,7 +5,7 @@ permalink: /tags/
   {% block content%}
 
   <main >
-   <div class="banner-color hero">
+   <div class="hero">
       <div class="wrapper center mw7 pa2 intro">
       <h1 class="f1 pa2">Tags:</h1>
       </div>
@@ -13,7 +13,7 @@ permalink: /tags/
   
     <section class="center mw7 ma2">
       {% for tag in collections.tagList %}
-        {% include 'partials/article-list.njk' %}
+        {% include 'partials/article-card.njk' %}
       {% endfor %}
     </section>
   </main>

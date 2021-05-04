@@ -1,11 +1,7 @@
 {% extends "layouts/base.njk" %}
 
-  {% block content%}
-
-  <main class="center mw7 ma2">
-    <section class="intro mv5 pv4">
-      {{ content |safe }}
-    </section>
-  </main>
-
+{% block content%}
+  <section class="intro mv5 pv4">
+    {{ content |safe }}
+  </section>
 {% endblock content%}

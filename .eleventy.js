@@ -44,7 +44,6 @@ module.exports = function (eleventyConfig) {
             }
           }
         });
-        console.log(tagSet)
         return [...tagSet]
     })
     module.exports = function (eleventyConfig) {
