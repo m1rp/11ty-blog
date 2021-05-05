@@ -7,7 +7,7 @@ author       : "Sam"
 date         : "2021-05-05"
 ---
 
-Orca seems to be the go-to screen reader on linux systems.
+[Orca](https://help.gnome.org/users/orca/stable/) seems to be the go-to screen reader on linux systems.
 
 On Ubuntu, the setup is straight forward
 ```bash
@@ -22,7 +22,7 @@ yay orca
 sudo pacman -S orca
 ```
 
-It gets really tricky when you have a bizarre mix of window manager or GUI or sound system.
+It gets really tricky when you have a bizarre mix of window manager or GUI or sound system. [this message from a mail archive set me on the right track to solving my issue](https://mail.gnome.org/archives/orca-list/2014-March/msg00033.html)
 
 This can be configured through `spd-conf` in the terminal.
 
