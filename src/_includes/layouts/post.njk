@@ -1,15 +1,15 @@
-
-
 {% extends "layouts/base.njk" %}
 {% block content%}
   <article>
     <section class="intro">
-      <em class="p-author">{{ date}}</em>
-      <h1 class="f1 fw9 mb3 mt3 pt3 p-name ">{{ title }}</h1>
-      <h2 class="f3 lh-title p-summary"> {{introduction}} </h2> 
+      <h1>{{ title }}</h1>
+      {% if introduction %}
+      <h2 > {{introduction}} </h2> 
+      {% endif %}
+      <i>{{ date}}</i>
     </section>
 
-    <section class="mw7 w-100 center e-content f4 lh-copy content" id="content">
+    <section class="content" id="content">
     {{ content | safe}}
     </section>
 

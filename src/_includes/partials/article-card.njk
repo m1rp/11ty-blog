@@ -1,21 +1,15 @@
 <div class="article-card">
   <h2><a href={{post.url}}> {{post.data.title}} </a> </h2>
-  <div class="w-100 flex flex-row items-center justify-between">
-    <div class="w-60 pb0">
-      {%if post.data.introduction %}
-        <p >{{post.data.introduction}}</p>
-      {% endif %}
-      <div>
-      <span>
-        tags:
-        {%for tag in post.data.tags%}
-          [{{tag}}]
-        {%endfor%}
-      </span>
-      </div>
-    </div>
-      <span >
-        <h4 > {{ post.data.date }}</h4>
-      </span>
-    </div>
+  <i> {{ post.data.date }}</i>
+  {%if post.data.introduction %}
+    <p >{{post.data.introduction}}</p>
+  {% endif %}
+  
+  <span>
+    tags:
+    {%for tag in post.data.tags%}
+      [{{tag}}]
+    {%endfor%}   
+  </span>
+  
 </div>

@@ -42,7 +42,11 @@ nav {
  }
  footer{
   font-family: "Open Sans", Verdana, Geneva, sans-serif;
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
  }
 nav ul,
 footer ul {
@@ -85,7 +89,9 @@ main {
   min-height: 95vh;
   height: 100%;
 }
-
+article {
+line-height: 1.5;
+}
 button {
   border: 0.5rem solid var(--color-green-dark);
   line-height: 4rem;
@@ -100,10 +106,9 @@ button {
 }
 
 .article-card {
-  border-bottom: 1px solid var(--color-green);
+  border-bottom: .25rem solid var(--color-green);
   padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-  align-items: flex-start;
+  margin-bottom: 4rem;
 }
 
 .article-card:last-child {
@@ -151,13 +156,13 @@ em {
   flex-direction: column;
   justify-content: center;
 }
-.e-intro {
-  border-bottom: 0.25rem solid var(--color-green);
-}
+
 .intro{
   display: flex;
   flex-direction: column;
   align-content: center;
+  border-bottom: 0.25rem solid var(--color-green);
+  line-height: 1.5;
 }
 .intro h1 {
   font-size: 3rem;
@@ -166,7 +171,6 @@ em {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
-  
 }
 
 footer {
