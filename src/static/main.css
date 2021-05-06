@@ -71,7 +71,7 @@ footer a {
 
 a {
   color: var(--color-text);
-  text-decoration: underline;
+  text-decoration: underline var(--color-green) 2px;
   font-weight: 700;
 }
 
