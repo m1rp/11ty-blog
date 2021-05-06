@@ -2,8 +2,6 @@
   --color-bg:#fdfdf6; 
   --color-green-dark: #478565;
   --color-green:#258585;
-  --color-blue: #004FE0;
-  --color-blue-light: #1F6DFF;
   --color-text:#253535; 
 }
 
@@ -67,9 +65,10 @@ footer a {
   font-weight: 700;
 }
 
-a{
+a {
   color: var(--color-text);
   text-decoration: underline;
+  font-weight: 700;
 }
 
 section {
@@ -78,8 +77,8 @@ section {
 
 a:focus,
 a:hover {
-  color: var(--color-blue);
-  outline: dashed;
+  color: var(--color-green-dark);
+  outline: dashed var(--color-green);
 }
 
 main {
@@ -125,10 +124,11 @@ p, .content {
   line-height: 1.8rem; 
 }
 .content a {
-  color: var(--color-blue);
+  color: var(--color-green);
+
 }
 .content a:visited{
-  color: var(--color-blue-light);
+  color: var(--color-green);
 }
 
 
