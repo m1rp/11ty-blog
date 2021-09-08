@@ -12,13 +12,13 @@ date            : "2021-09-03"
 
 ## Today I really wanted to write some Python. 
 
-I can't really explain why but coding in Python always brings me a bit of joy.
+I can't explain why but coding in Python always brings me a bit of joy.
 
-I was talking with a coleague and the topic of RSS feeds came up. I'd thought about coding a very basic RSS reader for a bit, but today I finally managed to get started.
+I was talking with a colleague and the topic of RSS feeds came up. I'd thought about coding a very basic RSS reader for a bit, but today I finally managed to get started.
 
-For now, the [repo is public](https://github.com/m1rp/feed-me-py) , and I hope I'll be able to findboth time and motivation to dig into it a bit more. I'm not entirely sure what I want to do with this.
+For now, the [repo is public](https://github.com/m1rp/feed-me-py) , and I hope I'll be able to find both time and motivation to dig into it a bit more. I'm not entirely sure what I want to do with this.
 
-it's extremely basic at the moment but what the script does is:
+it's basic at the moment but what the script does is:
 - read some urls from a JSON file,
 - fetch the RSS/Atom feed for each url
 - for each feed only keep `title, content, url, updated date`,
@@ -28,12 +28,12 @@ it's extremely basic at the moment but what the script does is:
 
 Essentially I'm mapping a list of lists to a list of simpler lists. 'simple'.
 
-What I like about this is that I could get something bare bones up and running really quickly without much python knowledge at all. There was one tricky bit that I ~~stole~~ took inspiration from [this blog post](https://waylonwalker.com/parsing-rss-python/#combining-feeds) :
+I like that I could get something bare bones up and running swiftly without much python knowledge at all. There was one tricky bit that I ~~stole~~ took inspiration from [this blog post](https://waylonwalker.com/parsing-rss-python/#combining-feeds) :
 
 `simplified_feeds[index].sort(key=lambda x: parse(x['updated']), reverse = True)`
 
 I can understand what's happening but I wouldn't have found this out without a ton of googling. What I'm doing here is sorting a feeds entries in chronological order. I'm not 100% sure about the key=lambda stuff.
 
-What I found out that was slightly unpleasant is that not all rss feeds us the same data model (that's why I added a conditional statement to get the content, they aren't all called the same thing).
+What I found slightly unpleasant is that not all RSS  feeds us the same data model. that's why I added a conditional statement  to get the content, they aren't all called the same thing.
 
 Anyway, I wanted to write some Python. I did. It was cool. I highly recommend it!
