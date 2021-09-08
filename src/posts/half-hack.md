@@ -1,6 +1,5 @@
 ---
 title           : A Few Hours Of Python
-draft : true
 slug            : half-hack
 author          : Sam
 tags          : 
@@ -26,3 +25,15 @@ it's extremely basic at the moment but what the script does is:
 - sort each feed by date
 - create a list of these feeds
 - save everything to a JSON file
+
+Essentially I'm mapping a list of lists to a list of simpler lists. 'simple'.
+
+What I like about this is that I could get something bare bones up and running really quickly without much python knowledge at all. There was one tricky bit that I ~~stole~~ took inspiration from [this blog post](https://waylonwalker.com/parsing-rss-python/#combining-feeds) :
+
+`simplified_feeds[index].sort(key=lambda x: parse(x['updated']), reverse = True)`
+
+I can understand what's happening but I wouldn't have found this out without a ton of googling. What I'm doing here is sorting a feeds entries in chronological order. I'm not 100% sure about the key=lambda stuff.
+
+What I found out that was slightly unpleasant is that not all rss feeds us the same data model (that's why I added a conditional statement to get the content, they aren't all called the same thing).
+
+Anyway, I wanted to write some Python. I did. It was cool. I highly recommend it!
