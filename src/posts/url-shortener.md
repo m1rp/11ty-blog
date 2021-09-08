@@ -8,7 +8,7 @@ tags          :
   - typescript
 categories    : [Tech]
 date: "2020-05-25"
-edit: "2020.05-27"
+edit: "2020-05-27"
 draft: false
 ---
 

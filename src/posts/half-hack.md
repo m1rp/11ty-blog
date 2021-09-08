@@ -2,10 +2,8 @@
 title           : A Few Hours Of Python
 slug            : half-hack
 author          : Sam
-tags          : 
-    - Python
-    - dev
-categories    : [Tech]
+tags            : [Python, dev] 
+categories      : [Tech]
 introduction    : Taking Some Time to Rediscover the Joys of Python
 date            : "2021-09-03"
 ---
