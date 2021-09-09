@@ -2,6 +2,10 @@
   "name": "11ty-blog",
   "version": "1.0.0",
   "description": "personal blog",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm i && npx @11ty/eleventy",
