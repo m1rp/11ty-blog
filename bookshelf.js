@@ -28,7 +28,6 @@ async function init() {
         // }
     }).then(response =>{
         const titles=[]
-        console.log(response)
         response.results.forEach(result =>{            
                 const finished = result.properties.finished.checkbox ? "finished" : "started"
                 titles.push([result.properties.Name.title[0]['plain_text'],result.properties.author.rich_text[0]['plain_text'],finished ])
