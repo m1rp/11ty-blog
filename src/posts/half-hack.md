@@ -28,7 +28,9 @@ Essentially I'm mapping a list of lists to a list of simpler lists. 'simple'.
 
 I like that I could get something bare bones up and running swiftly without much python knowledge at all. There was one tricky bit that I ~~stole~~ took inspiration from [this blog post](https://waylonwalker.com/parsing-rss-python/#combining-feeds) :
 
-`simplified_feeds[index].sort(key=lambda x: parse(x['updated']), reverse = True)`
+```javascript
+simplified_feeds[index].sort(key=lambda x: parse(x['updated']), reverse = True)
+```
 
 I can understand what's happening but I wouldn't have found this out without a ton of googling. What I'm doing here is sorting a feeds entries in chronological order. I'm not 100% sure about the key=lambda stuff.
 
