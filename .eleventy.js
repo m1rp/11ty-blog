@@ -50,6 +50,7 @@ module.exports = function (eleventyConfig) {
     module.exports = function (eleventyConfig) {
         eleventyConfig.setDataDeepMerge(true);
     };
+    eleventyConfig.addPassthroughCopy({ "src/img": "dist/img" });
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(syntaxHighlight);
     generateBookshelf()
@@ -58,7 +59,7 @@ module.exports = function (eleventyConfig) {
             input: "src",
             output: "dist"
         },
-        templateFormats: ["css", "njk", "md", "txt", "ttf", "pdf"],
+        templateFormats: ["css", "njk", "md", "txt", "ttf", "pdf", 'png','ico'],
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
         passthroughFileCopy: true
