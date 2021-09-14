@@ -13,4 +13,14 @@
       {%endif%}
   {% endfor %}
 </section>
+
+{% if reading | length > 0%}
+<section>
+  <h2>Right now I'm reading:</h2>
+  {% for entry in reading %}
+    <i>{{ entry[0] }}</i> , by {{ entry[1] }}
+  {% endfor %}
+</section>
+{% endif %}
+
 {% endblock content%}

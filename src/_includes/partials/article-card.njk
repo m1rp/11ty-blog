@@ -1,15 +1,8 @@
 <div class="article-card">
-  <h2><a href={{post.url}}> {{post.data.title}} </a> </h2>
+  <h3><a href={{post.url}}> {{post.data.title}} </a> </h3>
   <i> {{ post.data.date }}</i>
   {%if post.data.introduction %}
     <p >{{post.data.introduction}}</p>
   {% endif %}
-  
-  <span>
-    tags:
-    {%for tag in post.data.tags%}
-      [{{tag}}]
-    {%endfor%}   
-  </span>
   
 </div>

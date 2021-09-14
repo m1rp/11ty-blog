@@ -28,12 +28,19 @@ async function init() {
         // }
     }).then(response =>{
         const titles=[]
+        const curentlyReading= []
         response.results.forEach(result =>{            
                 const finished = result.properties.finished.checkbox ? "finished" : "started"
-                titles.push([result.properties.Name.title[0]['plain_text'],result.properties.author.rich_text[0]['plain_text'],finished ])
+                const reading = result.properties.reading.checkbox ? true : false
+                if(reading){
+                  curentlyReading.push([result.properties.Name.title[0]['plain_text'],result.properties.author.rich_text[0]['plain_text'],finished, reading ])
+                };
+                titles.push([result.properties.Name.title[0]['plain_text'],result.properties.author.rich_text[0]['plain_text'],finished, reading ])
             }
         )
         fs.writeFile("src/_data/bookshelf.json",JSON.stringify(titles,null, 2));
+        fs.writeFile("src/_data/reading.json",JSON.stringify(curentlyReading,null, 2));
+
 
     })
   } catch (error) {

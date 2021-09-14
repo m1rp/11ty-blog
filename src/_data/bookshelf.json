@@ -2,81 +2,97 @@
   [
     "The Great Adaptation: Climate, Capitalism and Catastrophe",
     "Romain Felli",
-    "started"
+    "started",
+    true
   ],
   [
     "Peau noirs, masques blancs",
     "Franz fanon ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "The Indian ideology ",
     "Perry Anderson ",
-    "started"
+    "started",
+    false
   ],
   [
     "How to blow up a pipeline",
     "Andreas malm ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "The invention of Sicily ",
     "James mackay ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "Bullshit jobs",
     "David graeber ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "The grapes of wrath",
     "John Steinbeck ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "If Beale street could talk",
     "James Baldwin ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "how we underdeveloped Africa ",
     "Rodney Walters ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "A civic technologists practice guide",
     "Cyd Harrell ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "The government of no one ",
     "Ruth kinna ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "Giovanni’s room",
     "James Baldwin ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "Fille garçon même éducation. ",
     "Pihla hintika & Elisa rigoulet ",
-    "started"
+    "started",
+    false
   ],
   [
     "Mediocre",
     "Ijeoma olou ",
-    "finished"
+    "finished",
+    false
   ],
   [
     "Mask off ",
     "JJ Bola",
-    "finished"
+    "finished",
+    false
   ],
   [
     "the soul of a new machine",
     "Tracy Kidder",
-    "finished"
+    "finished",
+    false
   ]
 ]

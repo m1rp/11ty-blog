@@ -30,7 +30,12 @@ h6 {
   color: var(--color-text-bright);
 }
 
-
+h2{
+  font-size: 3em;
+}
+h3{
+  font-size: 2.5em;
+}
 
 nav {
   border-bottom: 0.5rem solid var(--color-green);
@@ -79,7 +84,8 @@ a {
 }
 
 section {
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2em;
 }
 
 a:focus,
@@ -102,6 +108,11 @@ button {
   line-height: 4rem;
   background-color: inherit;
 }
+blockquote{
+  margin: auto 0;
+  padding-left: 1.125em;
+  border-left: .125em solid var(--color-green);
+}
 
 .boxed-link {
   font-size: 1.5rem;
@@ -113,7 +124,7 @@ button {
 .article-card {
   border-bottom: .25rem solid var(--color-text);
   padding-bottom: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .article-card:last-child {
@@ -190,7 +201,6 @@ tr:nth-child(even){
 .u-container {
   max-width: 48em;
   margin: 1em auto;
-
 }
 .u-flex{
   display: flex;
