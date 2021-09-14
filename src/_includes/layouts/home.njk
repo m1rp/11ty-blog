@@ -7,8 +7,10 @@
 
 <section>  
   <h2>Latest posts</h2>
-  {% for post in collections.posts %}
-    {% include 'partials/article-card.njk' %}
+    {% for post in collections.posts %}
+    {% if loop.index0 < 3 %}
+      {% include 'partials/article-card.njk' %}
+      {%endif%}
   {% endfor %}
 </section>
 {% endblock content%}
