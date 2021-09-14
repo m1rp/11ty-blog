@@ -45,6 +45,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: .5em;
 }
  footer{
   font-family: "Open Sans", Verdana, Geneva, sans-serif;
@@ -90,6 +91,8 @@ a:hover {
 main {
   min-height: 95vh;
   height: 100%;
+  padding: 1em;
+
 }
 article {
 line-height: 1.5;
