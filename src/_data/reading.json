@@ -1,8 +1,9 @@
 [
-  [
-    "The Great Adaptation: Climate, Capitalism and Catastrophe",
-    "Romain Felli",
-    "started",
-    true
-  ]
+  {
+    "title": "The Great Adaptation: Climate, Capitalism and Catastrophe",
+    "link": "https://www.versobooks.com/books/3797-the-great-adaptation",
+    "author": "Romain Felli",
+    "reading": true,
+    "finished": false
+  }
 ]

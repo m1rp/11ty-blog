@@ -1,98 +1,114 @@
 [
-  [
-    "The Great Adaptation: Climate, Capitalism and Catastrophe",
-    "Romain Felli",
-    "started",
-    true
-  ],
-  [
-    "Peau noirs, masques blancs",
-    "Franz fanon ",
-    "finished",
-    false
-  ],
-  [
-    "The Indian ideology ",
-    "Perry Anderson ",
-    "started",
-    false
-  ],
-  [
-    "How to blow up a pipeline",
-    "Andreas malm ",
-    "finished",
-    false
-  ],
-  [
-    "The invention of Sicily ",
-    "James mackay ",
-    "finished",
-    false
-  ],
-  [
-    "Bullshit jobs",
-    "David graeber ",
-    "finished",
-    false
-  ],
-  [
-    "The grapes of wrath",
-    "John Steinbeck ",
-    "finished",
-    false
-  ],
-  [
-    "If Beale street could talk",
-    "James Baldwin ",
-    "finished",
-    false
-  ],
-  [
-    "how we underdeveloped Africa ",
-    "Rodney Walters ",
-    "finished",
-    false
-  ],
-  [
-    "A civic technologists practice guide",
-    "Cyd Harrell ",
-    "finished",
-    false
-  ],
-  [
-    "The government of no one ",
-    "Ruth kinna ",
-    "finished",
-    false
-  ],
-  [
-    "Giovanni’s room",
-    "James Baldwin ",
-    "finished",
-    false
-  ],
-  [
-    "Fille garçon même éducation. ",
-    "Pihla hintika & Elisa rigoulet ",
-    "started",
-    false
-  ],
-  [
-    "Mediocre",
-    "Ijeoma olou ",
-    "finished",
-    false
-  ],
-  [
-    "Mask off ",
-    "JJ Bola",
-    "finished",
-    false
-  ],
-  [
-    "the soul of a new machine",
-    "Tracy Kidder",
-    "finished",
-    false
-  ]
+  {
+    "title": "The Great Adaptation: Climate, Capitalism and Catastrophe",
+    "link": "https://www.versobooks.com/books/3797-the-great-adaptation",
+    "author": "Romain Felli",
+    "reading": true,
+    "finished": false
+  },
+  {
+    "title": "Peau noirs, masques blancs",
+    "link": "https://www.goodreads.com/book/show/57594061-peau-noire-masques-blancs",
+    "author": "Franz Fanon ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "The Indian ideology ",
+    "link": "https://www.versobooks.com/books/3750-the-indian-ideology",
+    "author": "Perry Anderson ",
+    "reading": false,
+    "finished": false
+  },
+  {
+    "title": "How to blow up a pipeline",
+    "link": "https://www.versobooks.com/books/3665-how-to-blow-up-a-pipeline",
+    "author": "Andreas Malm ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "The invention of Sicily ",
+    "link": "https://www.versobooks.com/books/3793-the-invention-of-sicily",
+    "author": "James Mackay ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "Bullshit jobs",
+    "link": "https://theanarchistlibrary.org/library/david-graeber-bullshit-jobs",
+    "author": "David Graeber ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "link": "https://www.goodreads.com/book/show/18114322-the-grapes-of-wrath",
+    "author": "John Steinbeck ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "If Beale Street Could Talk",
+    "link": "https://www.goodreads.com/book/show/38463.If_Beale_Street_Could_Talk",
+    "author": "James Baldwin ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "How We Underdeveloped Africa ",
+    "link": "https://www.versobooks.com/books/2785-how-europe-underdeveloped-africa",
+    "author": "Rodney Walters ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "A civic technologists practice guide",
+    "link": "https://cydharrell.com/book/",
+    "author": "Cyd Harrell ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "The Government of No One ",
+    "link": "https://www.akpress.org/governmentofnoone.html",
+    "author": "Ruth kinna ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "Giovanni’s Room",
+    "link": "https://www.goodreads.com/book/show/38462.Giovanni_s_Room",
+    "author": "James Baldwin ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "Fille garçon même éducation. ",
+    "link": "https://www.goodreads.com/book/show/51301336-fille-gar-on-m-me-ducation",
+    "author": "Pihla Hintika & Elisa Rigoulet ",
+    "reading": false,
+    "finished": false
+  },
+  {
+    "title": "Mediocre",
+    "link": "https://www.sealpress.com/titles/ijeoma-oluo/mediocre/9781580059510/",
+    "author": "Ijeoma Olou ",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "Mask off ",
+    "link": "https://www.plutobooks.com/9780745338743/mask-off/",
+    "author": "JJ Bola",
+    "reading": false,
+    "finished": true
+  },
+  {
+    "title": "The Soul of a New Machine",
+    "link": "https://www.goodreads.com/book/show/7090.The_Soul_of_a_New_Machine",
+    "author": "Tracy Kidder",
+    "reading": false,
+    "finished": true
+  }
 ]

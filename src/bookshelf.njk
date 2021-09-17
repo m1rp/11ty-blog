@@ -1,0 +1,10 @@
+---
+title: Bookshelf
+layout: layouts/post.njk
+slug: bookshelf
+introduction    : What I'm reading in 2021 
+---
+{% block content%}
+{% set books = bookshelf %}
+{% include "partials/books.njk" %}
+{% endblock %}

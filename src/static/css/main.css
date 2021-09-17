@@ -214,3 +214,11 @@ tr:nth-child(even){
 .u-flex-column{
   flex-direction: column;
 }
+
+.c-book {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 1em ;
+}

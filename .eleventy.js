@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
     })
     module.exports = function (eleventyConfig) {
         eleventyConfig.setDataDeepMerge(true);
-    };
+    };  
     eleventyConfig.addPassthroughCopy({ "src/img": "dist/img" });
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(syntaxHighlight);
