@@ -22,7 +22,6 @@ async function init() {
         const curentlyReading= []
         response.results.forEach(result =>{            
           const book = bookInfoFromNotion(result)
-          console.log(book)
           if(book.reading === true){
             curentlyReading.push(book)
           };
