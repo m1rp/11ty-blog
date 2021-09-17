@@ -75,20 +75,5 @@ Once we have our entries, we map over the array and keep just the data points we
 This file is in a special 11ty folder. Data in `_data` is globally accessible, So it can be used anywhere.
 
 
-And here's it is being used!
-
-### I'm currently reading :
-{% for entry in bookshelf %}
-{% if entry[2] === "started" %}
-- <i>{{ entry[0] }}</i> , by {{ entry[1] }}
-{% endif %}
-{% endfor %}
-
-### I'm finished reading : 
-{% for entry in bookshelf %}
-{% if entry[2] === "finished" %}
-- <i>{{ entry[0] }}</i> , by {{ entry[1] }}
-{% endif %}
-{% endfor %}
-
+[And here's it is being used!](/bookshelf/)
 
