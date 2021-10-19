@@ -1,7 +1,6 @@
 
 <dl class="c-book-list">
     {% for book in bookList %}
-    {{book}}
     <div class="c-book">
         <dt><a href={{book.link}}> {{book.title}}</a></dt>
         <dd> by {{ book.author }}</dd>

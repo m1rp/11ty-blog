@@ -12,18 +12,18 @@ const bookInfoFromNotion = (input) => ({
     finished: input.properties.finished.checkbox ? true : false
 })
 
-module.exports = async function(){
-    await notion.databases.query({
+module.exports = async () => await 
+    notion.databases.query({
         database_id: BookshelfId,
-    }).then(response =>
-    {
+    }).then(response => {
+        const reading=[]
         response.results.forEach(result =>{
-        if(result.properties.reading.checkbox == true){
-            let reading= bookInfoFromNotion(result)
-            return JSON.stringify(reading,null, 2)
-        }
+            if(result.properties.reading.checkbox === true){
+                let book= bookInfoFromNotion(result)
+                reading.push(book)
+            }
         })
-    })
-} 
-
-  
+        return reading
+    }).catch(function(error){
+    console.error(error)
+})

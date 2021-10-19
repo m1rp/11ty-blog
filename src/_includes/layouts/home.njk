@@ -14,14 +14,11 @@
   {% endfor %}
 </section>
 
-{# {% if bookshelf | length > 0%} #}
 <section>
   <h2>Right now I'm reading:</h2>
 {%- set bookList = reading -%}
-<p>{{ reading | length}}</p>
 {% include "partials/books.njk" %}
 <h4><a href="/bookshelf/">Check out</a> what else I've read this year!</h4>
 </section>
-{# {% endif %} #}
 
 {% endblock content%}
