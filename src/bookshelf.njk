@@ -5,6 +5,9 @@ slug: bookshelf
 introduction    : What I'm reading in 2021 
 ---
 {% block content%}
-{% set books = bookshelf %}
+{%for book in books%}
+{{book.title}}
+{%endfor%}
+{%- set bookList = books -%}
 {% include "partials/books.njk" %}
 {% endblock %}

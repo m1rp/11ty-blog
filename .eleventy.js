@@ -1,6 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const generateBookshelf = require('./bookshelf')
+// const reading = require('./src/_data/reading')
+// const books = require('./src/_data/books/books')
 module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("posts", collection =>
         [...collection
@@ -53,7 +54,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "src/img": "dist/img" });
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(syntaxHighlight);
-    generateBookshelf()
     return {
         dir: {
             input: "src",
