@@ -23,5 +23,14 @@ So when we execute `lsof -t -i:3000 -i:8080` in our shell we should get 2 pids. 
 We can pipe (`|`) the output of this command to `xargs`  and the `kill` command like so:
 
 ```bash
-lsof -t -i:8080 -i:3000 | xargs -I % "kill -9 %"
+lsof -t -i:8080 -i:3000 | xargs -n1 sh -c 'kill -9 $0'
+```
+A quick breakdown:
+    - `xargs -n1`: number of argument (1 in this case)
+    - `sh -c 'kill -9 $0'` : instruct sh to run the following command and replace $0 with value from xargs
+
+
+this also works
+```bash
+lsof -t -i:8080 -i:3000 | xargs -i % sh -c 'kill -9 %'
 ```
