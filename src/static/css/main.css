@@ -2,7 +2,7 @@
   --color-green:#258585;  
   --color-text-bright: #e6fdfd;
   --color-green-dark: #478565;
-  /* --color-text: #c4dbdb; */
+  --color-focus: #ffe86f; 
   --color-text: #9bb;
   --color-bg: #213131;
 }
@@ -76,7 +76,12 @@ footer ul  {
   font-size: 1.25rem;
   font-weight: 700;
 }
-
+.c-nav a:hover,
+.c-nav a:focus,
+.c-footer a:hover,
+.c-footer a:focus{
+  color: var(--color-focus)
+}
 a {
   color: var(--color-text-bright);
   text-decoration: underline var(--color-text-bright) 2px;
@@ -90,8 +95,8 @@ section {
 
 a:focus,
 a:hover {
-  color: var(--color-text);
-  outline: dashed var(--color-text-bright);
+  color: var(--color-focus);
+  outline: dashed var(--color-focus);;
 }
 
 main {
@@ -221,4 +226,7 @@ tr:nth-child(even){
   flex-wrap: wrap;
   justify-content: start;
   margin-bottom: 1em ;
+}
+.c-book > *{ 
+  padding-bottom: .5rem;
 }
