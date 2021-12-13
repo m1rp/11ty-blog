@@ -1,17 +1,18 @@
 const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
 const fetch = require('node-fetch')
-module.exports = async function() {
-    const domain = 'smcllw.me'
-    const token = process.env.WEBMENTION_IO_TOKEN
-    const url = `${API_ORIGIN}?domain=${domain}&token=${token}`
-    try {
+
+const domain = 'smcllw.me'
+const token = process.env.WEBMENTION_IO_TOKEN
+const url = `${API_ORIGIN}?domain=${domain}&token=${token}`
+
+module.exports = async () => { 
+    try{
         const response = await fetch(url)
-        if (response.ok) {
-            const feed = await response.json()
-            return feed.length > 1 ? feed : ["NOOOOOO"];
-        }
-    } catch (err) {
-        console.error(err)
-        return null
+        const data = await response.json()
+        // console.log(data.children)
+        return data.children
     }
+    catch (err){
+        console.error(err)
+    } 
 }

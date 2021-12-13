@@ -14,6 +14,15 @@
   {% endfor %}
 </section>
 
+{# <section>
+  <h2> WEBMENTIONS</h2>
+  <pre>
+  {% for e in webmentions %}
+    <a href="{{e.url}}">{{e['mention-of']}}</a>
+    {%endfor%}
+  </pre>
+</section> #}
+
 <section>
   <h2>Right now I'm reading:</h2>
 {%- set bookList = reading -%}
