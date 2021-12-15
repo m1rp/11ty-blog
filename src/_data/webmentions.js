@@ -9,8 +9,15 @@ module.exports = async () => {
     try{
         const response = await fetch(url)
         const data = await response.json()
-        // console.log(data.children)
-        return data.children
+        let final = data.children.map(element => {
+            if (element['wm-property'] == 'like-of'){
+                return {"photo": element.author.photo,"link": element.author.url}
+            }else {
+                return {}
+            }
+        });
+        console.log(final)
+        return final
     }
     catch (err){
         console.error(err)
