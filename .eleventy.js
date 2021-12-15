@@ -55,7 +55,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "src/img": "dist/img" });
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(syntaxHighlight);
-    eleventyConfig.addNunjucksFilter("getLikes", function(value) {webM.getLikes(value)});
+    eleventyConfig.addNunjucksFilter("getLikes", function(mentions,url) {webM.getLikes(mentions, url)});
     return {
         dir: {
             input: "src",
@@ -64,6 +64,7 @@ module.exports = function (eleventyConfig) {
         templateFormats: ["css", "njk", "md", "txt", "ttf", "pdf", 'png','ico'],
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
-        passthroughFileCopy: true
+        passthroughFileCopy: true,
+        pathPrefix: '/'
     }
 };

@@ -1,0 +1,9 @@
+{%- set abs -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
+
+{%- set mentions = webmentions | getLikes(abs) -%}
+{# <div class="webmentions">
+  <h4>Liked by</h4>
+  {% for webmention in mentions %}
+        <img src="{{webmention.photo}}" alt="{{webmention.author}}">
+{% endfor %}
+</div> #}

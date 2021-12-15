@@ -1,8 +1,7 @@
-function getLikes(webmentions, url) {    
+
+function getLikes(webmentions, url) {
+        let absoluteURL = `https://smcllw.me${url}`
    return webmentions
-        .filter(entry => entry['wm-target'] === url)
-        .filter(entry =>entry['wm-property'] === 'like-of')
-        
-        
+        .filter(entry => entry.link === absoluteURL)        
 }
-module.exports = {getLikes}
+// module.exports = {getLikes}

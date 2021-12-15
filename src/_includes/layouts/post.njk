@@ -1,3 +1,13 @@
+---
+"metadata": {  
+  "url": "https://smcllw.me/",
+  "author": {
+    "name": "Sam (he/they)",
+    "email": "sam.g.clulow@gmail.com"
+  }
+}
+---
+
 {% extends "layouts/base.njk" %}
 {% block content%}
   <article>
@@ -14,4 +24,5 @@
     </section>
 
   </article>
+{% include 'partials/webmentions.njk' %}
 {% endblock %}

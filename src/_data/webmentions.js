@@ -9,14 +9,8 @@ module.exports = async () => {
     try{
         const response = await fetch(url)
         const data = await response.json()
-        let final = data.children.map(element => {
-            if (element['wm-property'] == 'like-of'){
-                return {"photo": element.author.photo,"link": element.author.url}
-            }else {
-                return {}
-            }
-        });
-        console.log(final)
+        let final = data.children.filter(element => element['wm-property'] == 'like-of')
+        final = final.map(element =>({"photo": element.author.photo,"link": element["like-of"], "author": element.author.name}))
         return final
     }
     catch (err){
