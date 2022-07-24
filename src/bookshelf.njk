@@ -2,10 +2,16 @@
 title: Bookshelf
 layout: layouts/post.njk
 slug: bookshelf
-introduction    : What I'm reading in 2021 
+introduction    : What I'm reading
 ---
 {% block content%}
-{%- set bookList = books -%}
+<h2>2022</h2>
+{%- set bookList = books2022 -%}
 {% include "partials/books.njk" %}
+
+<h2>2021</h2>
+{%- set bookList = books2021 -%}
+{% include "partials/books.njk" %}
+
 
 {% endblock %}
