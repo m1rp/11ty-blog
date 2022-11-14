@@ -1,6 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const webM = require('./getWebmentions')
+// const webM = require('./getWebmentions')
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("posts", collection =>
@@ -53,9 +53,10 @@ module.exports = function (eleventyConfig) {
         eleventyConfig.addGlobalData("baseUrl", "https://smcllw.me");
     };  
     eleventyConfig.addPassthroughCopy({ "src/img": "dist/img" });
+    eleventyConfig.addPassthroughCopy({ "src/fonts": "/fonts" });
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(syntaxHighlight);
-    eleventyConfig.addNunjucksFilter("getLikes", function(mentions,url) {webM.getLikes(mentions, url)});
+    // eleventyConfig.addNunjucksFilter("getLikes", function(mentions,url) {webM.getLikes(mentions, url)});
     return {
         dir: {
             input: "src",
